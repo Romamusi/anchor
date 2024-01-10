@@ -1,0 +1,23 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[workspace]
+members = [
+    "programs/my_anchor_project"
+]
+
+[programs.localnet]
+my_anchor_project = "3AWTmg7RU2vM8MZG64veUtthB4EVybSN2rHrHuZ6VWtX"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "/mnt/d/Code/contract/my_anchor_project/keypair.json"
+
+[scripts]
+test = "yarn run mocha -t 1000000 tests/"
